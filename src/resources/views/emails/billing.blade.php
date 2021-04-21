@@ -134,10 +134,14 @@
                                                     valign="top">
                                                     <br style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;"/>
 {{--                                                    Дата - {{$row['created_at']}}<br>--}}
-{{--                                                    Имя - {{$request->name}} <br>--}}
-{{--                                                    Телефон - {{$request->phone}} <br>--}}
-{{--                                                    Адрес - {{$request->address}} <br>--}}
-{{--                                                    Комментарий - {{$request->comment}}--}}
+
+
+
+                                                    Имя - {{$request->information['name']}} <br>
+                                                    Телефон - {{$request->information['phone']}} <br>
+                                                    Почта - {{$request->information['email']}} <br>
+                                                    Адрес - {{$request->information['address']}} <br>
+                                                    Комментарий - {{$request->information['comments']}}
                                                 </td>
                                             </tr>
                                             <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">

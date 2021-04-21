@@ -22,6 +22,7 @@ class CartMail extends Mailable
 
     public function __construct(Request $request)
     {
+//        dd($request->information);
         $this->request = $request;
     }
 
