@@ -139,7 +139,7 @@
 
                                                     Имя - {{$request->information['name']}} <br>
                                                     Телефон - {{$request->information['phone']}} <br>
-                                                    Почта - {{$request->information['email']}} <br>
+{{--                                                    Почта - {{$request->information['email']}} <br>--}}
                                                     Адрес - {{$request->information['address']}} <br>
                                                     Комментарий - {{$request->information['comments']}}
                                                 </td>
