@@ -14,10 +14,13 @@ class Cart extends Controller
 {
     public function send(Request $request)
     {
-        Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
-        //        Mail::to('orbita88yuliya@mail.ru')->send(new CartMail($request));
+        $token = $request->bearerToken();
 
-        return $request;
+        if($token == '1'){
+            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
+            //        Mail::to('orbita88yuliya@mail.ru')->send(new CartMail($request));
+        }
+
     }
 
 }
