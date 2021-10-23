@@ -119,7 +119,7 @@
                                         <h2 class="aligncenter"
                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif; box-sizing: border-box; font-size: 24px; color: #000; line-height: 1.2em; font-weight: 400; text-align: center; margin: 40px 0 0;"
                                             align="left">
-                                            дата -
+                                           {{ $request->products[0]['date'] }}
                                         </h2>
                                     </td>
                                 </tr>
