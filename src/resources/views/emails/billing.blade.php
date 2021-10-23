@@ -159,11 +159,19 @@
                                                                     <strong>"{{$row['name']}}"</strong><br>
                                                                     ID {{$row['id']}}<br>
                                                                     Количество - {{$row['quantity']}} {{$row['unit']}}.<br>
-                                                                    Цена - {{$row['price']}} ₽/{{$row['unit']}} (со скидкой - {{$row['discount_price']}} ₽/{{$row['unit']}})
+                                                                    Цена - {{$row['size'][0]['price']['price']}} ₽/{{$row['unit']}}
                                                                 </td>
+{{--                                                                <td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; border-top-width: 1px; border-top-color: #eee; border-top-style: solid; margin: 0; padding: 10px 0;"--}}
+{{--                                                                    valign="top">--}}
+{{--                                                                    <strong>"{{$row['name']}}"</strong><br>--}}
+{{--                                                                    ID {{$row['id']}}<br>--}}
+{{--                                                                    Количество - {{$row['quantity']}} {{$row['unit']}}.<br>--}}
+{{--                                                                    Цена - {{$row['price']}} ₽/{{$row['unit']}} (со скидкой - {{$row['discount_price']}} ₽/{{$row['unit']}})--}}
+{{--                                                                </td>--}}
                                                                 <td class="alignright"
                                                                     style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: right; border-top-width: 1px; border-top-color: #eee; border-top-style: solid; margin: 0; padding: 10px 0;"
-                                                                    align="right" valign="top"> {{$row['discount_price'] * $row['quantity']}} ₽
+                                                                    align="right" valign="top"> {{$row['size'][0]['price']['price'] *  $row['quantity']}} ₽
+{{--                                                                    align="right" valign="top"> {{$row['discount_price'] * $row['quantity']}} ₽--}}
                                                                 </td>
                                                             </tr>
                                                         @empty
@@ -176,14 +184,14 @@
                                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                             <td class="alignright" width="80%"
                                                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #333; border-top-style: solid; border-bottom-color: #333; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 5px 0;"
-                                                                align="right" valign="top">Итого (с учётом скидки 5%):
+                                                                align="right" valign="top">Итого (с учётом скидки):
                                                             </td>
                                                             <td class="alignright"
                                                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: right; border-top-width: 2px; border-top-color: #333; border-top-style: solid; border-bottom-color: #333; border-bottom-width: 2px; border-bottom-style: solid; font-weight: 700; margin: 0; padding: 5px 0;"
                                                                 align="right" valign="top">{{$request->totalSum}} ₽
                                                             </td>
                                                         </tr>
-                                                    </table>
+                                                     </table>
                                                 </td>
                                             </tr>
                                         </table>

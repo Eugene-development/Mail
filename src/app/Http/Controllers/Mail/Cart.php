@@ -21,6 +21,11 @@ class Cart extends Controller
             //        Mail::to('orbita88yuliya@mail.ru')->send(new CartMail($request));
         }
 
+        if($token == '2'){
+            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
+//            Mail::to('mebellub@yandex.ru')->send(new CartMail($request));
+        }
+
     }
 
 }
