@@ -15,4 +15,6 @@
 
 
 $router->post('/sendOrder', 'Mail\Cart@send');
-$router->post('/sendOrder', 'Mail\Cart@send');
+$router->post('/sendPhone', 'Mail\Phone@send');
+$router->post('/sendEmail', 'Mail\Email@send');
+
