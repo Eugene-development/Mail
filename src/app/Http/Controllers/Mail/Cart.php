@@ -18,16 +18,12 @@ class Cart extends Controller
 
         if($token == '1'){
             Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
-            //        Mail::to('orbita88yuliya@yandex.ru')->send(new CartMail($request));
+            Mail::to('orbita88yuliya@yandex.ru')->send(new CartMail($request));
         }
 
         if($token == '2'){
             Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
-//            Mail::to('mebellub@yandex.ru')->send(new CartMail($request));
-        }
-
-        if($token == '3'){
-            Mail::to('indexpro24@gmail.com')->send(new CartMail($request));
+            Mail::to('mebellub@yandex.ru')->send(new CartMail($request));
         }
     }
 

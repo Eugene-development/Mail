@@ -16,6 +16,7 @@ class Email extends Controller
         $token = $request->bearerToken();
         if($token == '3'){
             Mail::to('indexpro24@gmail.com')->send(new EmailMail($request));
+            Mail::to('gostremont-direct@yandex.ru')->send(new EmailMail($request));
         }
     }
 }

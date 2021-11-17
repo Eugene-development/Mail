@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class PhoneMail extends Mailable
+class MeasurementMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,6 +32,8 @@ class PhoneMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.phone');
+        return $this->markdown('emails.measurement');
     }
+
+
 }
