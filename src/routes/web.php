@@ -13,6 +13,10 @@
 |
 */
 
+$router->get('/health', function () {
+    return 'Hello World';
+});
+
 
 $router->post('/sendOrder', 'Mail\Cart@send');
 $router->post('/sendPhone', 'Mail\Phone@send');
